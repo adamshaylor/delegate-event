@@ -1,0 +1,29 @@
+{
+  "name": "delegate-event",
+  "version": "0.0.0",
+  "description": "An angular directive for event delegation",
+  "main": "delegate-event.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamshaylor/delegate-event.git"
+  },
+  "keywords": [
+    "angular",
+    "events",
+    "delegation",
+    "directive"
+  ],
+  "author": "Adam Shaylor <business@adamshaylor.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamshaylor/delegate-event/issues"
+  },
+  "homepage": "https://github.com/adamshaylor/delegate-event",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-uglify": "~0.5"
+  }
+}

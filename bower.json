@@ -1,0 +1,28 @@
+{
+  "name": "delegate-event",
+  "version": "0.0.0",
+  "homepage": "https://github.com/adamshaylor/delegate-event",
+  "authors": [
+    "Adam Shaylor <business@adamshaylor.com>"
+  ],
+  "description": "An angular directive for event delegation",
+  "main": "delegate-event.js",
+  "keywords": [
+    "angular",
+    "events",
+    "delegation",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7 < 3",
+    "angular": ">=1.0 < 2"
+  }
+}

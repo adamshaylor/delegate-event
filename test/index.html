@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="testScenarios">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>delegate-event Test</title>
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../delegate-event.js"></script>
+	<script src="test-scenarios.js"></script>
+
+	<style>
+
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		
+		h1 {
+			font-size: 24px;
+			margin-bottom: 8px;
+		}
+
+		input,
+		textarea {
+			display: block;
+			width: 400px;
+		}
+
+		.scenario {
+			margin-bottom: 72px;
+		}
+
+	</style>
+
+</head>
+
+<body ng-controller="Scenarios">
+
+	<div class="scenario" ng-repeat="scenario in scenarios">
+		<h1></h1>
+	</div>
+	
+	<div class="scenario">
+		<h1><code>on-click</code></h1>
+		<button delegate-event on-click="onClickHandler">Click here</button>
+		<textarea class="output" ng-model="onClickOutput"></textarea>
+	</div>
+
+	<div class="scenario">
+		<h1><code>data-on-click</code></h1>
+		<button delegate-event data-on-click="dataOnClickHandler">Click here</button>
+		<textarea class="output" ng-model="dataOnClickOutput"></textarea>
+	</div>
+
+	<div class="scenario">
+		<h1><code>on-focus</code></h1>
+		<input type="text" delegate-event on-focus="onFocusHandler" placeholder="Focus here">
+		<textarea class="output" ng-model="onFocusOutput"></textarea>
+	</div>
+
+	<div class="scenario">
+		<h1>Nested <code>on-click</code></h1>
+		<div delegate-event on-click="nestedOnClickHandler">
+			<button>Click here</button>
+		</div>
+		<textarea class="output" ng-model="nestedOnClickOutput"></textarea>
+	</div>
+
+	<div class="scenario">
+		<h1>Nested <code>on-focusin</code></h1>
+		<div delegate-event on-focusin="nestedOnFocusinHandler">
+			<input type="text" placeholder="Focus here">
+		</div>
+		<textarea class="output" ng-model="nestedOnFocusinOutput"></textarea>
+	</div>
+
+	<div class="scenario">
+		<h1>Nested <code>on-focusin</code> with filter</h1>
+		<div delegate-event on-focusin="nestedOnFocusinWithFilterHandler" on-focusin-filter=".special">
+			<input type="text" placeholder="Focusing here won't work">
+			<input type="text" placeholder="Focusing here will" class="special">
+		</div>
+		<textarea class="output" ng-model="nestedOnFocusinWithFilterOutput"></textarea>
+	</div>
+
+
+</body>
+
+</html>
