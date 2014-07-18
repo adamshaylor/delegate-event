@@ -30,9 +30,9 @@ bower install --save delegate-event
 </div>
 
 <!-- Delegation with filtering -->
-<div delegate-event on-click="handler" on-click-filter=".special">
+<div delegate-event on-click="handlerC" on-click-filter=".special">
   <button>This won’t work</button>
-  <button class="handlerC">This will</button>
+  <button class="special">This will</button>
 </div>
 
 <!-- Works with any event that follows the standard event naming convention (http://www.w3.org/TR/DOM-Level-3-Events/#event-types) -->
