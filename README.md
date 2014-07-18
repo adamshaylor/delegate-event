@@ -7,6 +7,14 @@ An angular directive for event delegation
 
 Angular 1.0+, jQuery 1.7+.
 
+## Installation
+
+From your project directory (or wherever you want your bower components to live):
+
+```shell
+bower install --save delegate-event
+```
+
 ## Usage
 
 ```html
@@ -41,7 +49,7 @@ Angular 1.0+, jQuery 1.7+.
 
 ## Why
 
-Most of the time Angular’s data binding does away with an event-centric architecture. The rest of the time, you should probably consider writing your own directive to define event binding, delegation and handling.
+You probably don’t need this. Most of the time, Angular’s data binding does away with an event-centric architecture. The rest of the time, you should probably consider writing your own directive to define event binding, delegation and handling.
 
 Every once in a while, however, you may have some reason to define event delegation within an Angular template. For example, you may need to:
 
